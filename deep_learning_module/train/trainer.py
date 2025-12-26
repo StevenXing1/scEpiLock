@@ -22,7 +22,7 @@ class Trainer:
         self.eval_data = eval_data
         self._model_path = model_path
         self._num_epochs = num_epochs
-        self._batch_size = batch_size//10
+        self._batch_size = batch_size
         self._learning_rate = learning_rate
         self._weight_decay = weight_decay
         self.use_pos_weight = use_pos_weight

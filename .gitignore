@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files
+*.pt
+*.pth
+*.h5
+*.pkl
+
+# Data files
+*.fa
+*.fasta
+*.csv
+*.bed
+*.bigWig
+*.bw
+
+# Output directories
+output/
+results/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config with sensitive paths
+**/config_*.json
+!**/config/config_*.json

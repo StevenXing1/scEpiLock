@@ -5,18 +5,12 @@ from sklearn.utils.class_weight import compute_class_weight
 from utils.utils import Utils
 
 class PreProcessor():
-    # TODO: change the encode_path naming to neg_path
     def __init__(self, pos_fasta_path, encode_path, neg_path, label_path, encode_n, neg_n,
                  cell_cluster, subset):
-        #self.pos_fasta_path = pos_fasta_path
-        #self.pos_fasta_path = "D:/scEpiLock/data/scEpiLock/brain/brain_atac_hg38_final.fa"
-        self.pos_fasta_path = "D:/scEpiLock/random_sequence.fa"
-
+        self.pos_fasta_path = pos_fasta_path
         self.encode_path = encode_path
         self.neg_path = neg_path
-        #self.label_path = label_path
-        self.label_path = "D:/scEpiLock/input.csv"
-        #self.label_path = "D:/scEpiLock/data/scEpiLock/brain/brain_scATAC_label.csv"
+        self.label_path = label_path
 
         self.encode_n = encode_n
         self.neg_n = neg_n
@@ -32,14 +26,8 @@ class PreProcessor():
         Utils.print_separator("finish pd.read_csv")
         Utils.print_separator("original shape")
 
-        print("pos_size") # TODO Delte these print -YG
-        print(pos_fasta.shape) #(114538,) / brain 221062
-        #print("encode_size")
-        #print(encode_fasta.shape) #(1127227,)/ brain 489777
-        #print("neg_size")
-        #print(neg_fasta.shape) #/ brain 1098300
-        print("label")
-        print(label.shape) #(114538, 1) /brain 221062
+        print(f"Positive fasta size: {pos_fasta.shape}")
+        print(f"Label shape: {label.shape}")
 
         #np.random.seed(202101190)
         #encode_index = np.random.choice(encode_fasta.shape[0], size=self.encode_n, replace=False)
