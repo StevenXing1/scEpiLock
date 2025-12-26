@@ -1,0 +1,20 @@
+{
+    "pos_forward_path": "data/your_positive_sequences.fa",
+    "encode_path": "data/your_encode_sequences.fa",
+    "neg_path": "data/your_negative_sequences.fa",
+    "label_path": "data/your_labels.csv",
+    "cell_cluster": [0, 1, 2, 3, 4, 5, 6],
+    "pos_n": 50000,
+    "encode_n": 30000,
+    "neg_n": 50000,
+    "model_name": "scEpiLock_Hyena",
+    "seq_len": 1000,
+    "d_model": 320,
+    "n_layers": 4,
+    "hyena_order": 2,
+    "n_epoch": 100,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "result_path": "results/hyena_model/",
+    "device": "cuda:0"
+}
